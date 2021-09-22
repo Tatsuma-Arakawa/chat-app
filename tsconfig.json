@@ -38,7 +38,8 @@
     // trueにするとコンパイル結果を出力しなくなる。
     "noEmit": true,
 
-    "experimentalDecorators": true,
+    // vuex-module-devoratorsを使用する際にtrueにしている
+    "transpileDependenciess": true,
 
     // non-relativeなimportにおいて、相対的なカレントディレクトリをどこにするか指定する。
     "baseUrl": ".",
