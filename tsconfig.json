@@ -1,20 +1,48 @@
 {
+  // コンパイルする際のオプション
   "compilerOptions": {
+    // どのバージョンでjsを出力するか
     "target": "ES2018",
+
+    // 出力するjsのモジュールの仕組みとして何を使用するかを指定する
     "module": "ESNext",
+
     "moduleResolution": "Node",
+
+    // コンパイルする際に使用する組み込みライブラリを指定する
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
       "DOM"
     ],
+
+    // フラグを有効にすると、コンパイル時にヘルパーメソッドが生成されるようになり、モジュールシステムの相互運用性が高まる
     "esModuleInterop": true,
+
+    // これをtrueにしておくと、.jsと.jsxもコンパイル対象に含まれるようになる。
     "allowJs": true,
+
+    // 型定義ではなく、jsのmapファイル。
     "sourceMap": true,
+
+    // 下記のオプションが全てtrueになる。
+    // --noImplicitAny
+    // --noImplicitThis
+    // --alwaysStrict
+    // --strictBindCallApply
+    // --strictNullChecks
+    // --strictFunctionTypes
+    // --strictPropertyInitialization
     "strict": true,
+
+    // trueにするとコンパイル結果を出力しなくなる。
     "noEmit": true,
+
     "experimentalDecorators": true,
+
+    // non-relativeなimportにおいて、相対的なカレントディレクトリをどこにするか指定する。
     "baseUrl": ".",
+
     "paths": {
       "~/*": [
         "./*"
@@ -23,6 +51,7 @@
         "./*"
       ]
     },
+
     "types": [
       "@nuxt/types",
       "@nuxtjs/axios",
