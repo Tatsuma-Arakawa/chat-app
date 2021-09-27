@@ -10,7 +10,6 @@ export type CreateChatInput = {
 
 export type ModelChatConditionInput = {
   comment?: ModelStringInput | null,
-  owner?: ModelStringInput | null,
   and?: Array< ModelChatConditionInput | null > | null,
   or?: Array< ModelChatConditionInput | null > | null,
   not?: ModelChatConditionInput | null,
