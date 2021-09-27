@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>develop環境</h1>
     <amplify-authenticator>
       <div style="max-width: 800px; margin-top: 20px">
         <v-text-field
