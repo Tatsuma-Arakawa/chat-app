@@ -1,32 +1,35 @@
 <template>
-  <amplify-authenticator>
-    <div style="max-width: 800px; margin-top: 20px">
-      <v-text-field
-        v-model="form.comment"
-        label="コメント"
-        placeholder="ここにコメントを書きましょう"
-        outlined
-        class="mx-auto"
-        append-icon="mdi-check-bold"
-        style="max-width: 100%; box-sizing: border-box"
-        @keydown="onEnter"
-        @click:append="createChat"
-      ></v-text-field>
+  <div>
+    <h1>develop環境</h1>
+    <amplify-authenticator>
+      <div style="max-width: 800px; margin-top: 20px">
+        <v-text-field
+          v-model="form.comment"
+          label="コメント"
+          placeholder="ここにコメントを書きましょう"
+          outlined
+          class="mx-auto"
+          append-icon="mdi-check-bold"
+          style="max-width: 100%; box-sizing: border-box"
+          @keydown="onEnter"
+          @click:append="createChat"
+        ></v-text-field>
 
-      <v-card v-for="(item, index) in items" :key="index" tile>
-        <v-list-item two-line>
-          <v-list-item-content>
-            <v-list-item-title>{{ item.comment }}</v-list-item-title>
-            <v-list-item-subtitle>by: {{ item.owner }}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
+        <v-card v-for="(item, index) in items" :key="index" tile>
+          <v-list-item two-line>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.comment }}</v-list-item-title>
+              <v-list-item-subtitle>by: {{ item.owner }}</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
+      </div>
+
+      <v-card>
+        <amplify-sign-out v-if="logoutBtn"></amplify-sign-out>
       </v-card>
-    </div>
-
-    <v-card>
-      <amplify-sign-out v-if="logoutBtn"></amplify-sign-out>
-    </v-card>
-  </amplify-authenticator>
+    </amplify-authenticator>
+  </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
