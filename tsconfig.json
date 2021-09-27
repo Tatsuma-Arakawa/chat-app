@@ -19,6 +19,8 @@
     // フラグを有効にすると、コンパイル時にヘルパーメソッドが生成されるようになり、モジュールシステムの相互運用性が高まる
     "esModuleInterop": true,
 
+    "experimentalDecorators": true,
+
     // これをtrueにしておくと、.jsと.jsxもコンパイル対象に含まれるようになる。
     "allowJs": true,
 
@@ -39,7 +41,7 @@
     "noEmit": true,
 
     // vuex-module-devoratorsを使用する際にtrueにしている
-    "transpileDependenciess": true,
+    // "transpileDependenciess": true,
 
     // non-relativeなimportにおいて、相対的なカレントディレクトリをどこにするか指定する。
     "baseUrl": ".",
@@ -63,5 +65,5 @@
     "node_modules",
     ".nuxt",
     "dist"
-  ]
+  ],
 }

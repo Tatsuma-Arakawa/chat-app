@@ -1,7 +1,4 @@
 {
-  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
-  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
-  "editor.tabSize": 2,
   "files.exclude": {
     "amplify/.config": true,
     "amplify/**/*-parameters.json": true,
@@ -11,11 +8,13 @@
     "amplify/backend/amplify-meta.json": true,
     "amplify/backend/awscloudformation": true
   },
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "editor.tabSize": 2,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": true
   },
   "vetur.format.enable": false,
   "git.ignoreLimitWarning": true
 }
-
